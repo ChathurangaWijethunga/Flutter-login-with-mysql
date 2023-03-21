@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       drawer: Drawer(),
-      body: ListView(
+      body: Row(
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -62,10 +62,23 @@ class _MyHomePageState extends State<MyHomePage> {
           
             Padding(
             padding: const EdgeInsets.all(8.0),
-          child:Text(curdate,style: TextStyle(fontSize: 25,),)
+          child:Text(
+            curdate,
+            style: TextStyle(fontSize: 25,),
+            )
           ),
-          
-        ],),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.today,
+              color: Colors.pink,
+            ),
+            ),
+        ],
+        ),
+
+        TopPostCard(),
+
     );
   }
 }
